@@ -24,7 +24,11 @@ FROM (
       FROM
         published_at) -1 = EXTRACT(QUARTER
       FROM
-        CURRENT_DATE) - 1)) issues
+        CURRENT_DATE) - 1)
+    AND EXTRACT(YEAR
+      FROM
+        published_at) = EXTRACT(YEAR
+      FROM CURRENT_DATE) issues
 LEFT JOIN (
   SELECT
     *
