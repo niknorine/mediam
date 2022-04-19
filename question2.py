@@ -27,8 +27,6 @@ for project in projects:
 # client = bigquery.Client.from_service_account_json(<PATH_TO_JSON>)
 # datasets = list(client.list_datasets())
 
-
-
     if datasets: # check if there are any datasets in the current project
         for dataset in datasets:
             print(' - {}'.format(dataset.dataset_id))
