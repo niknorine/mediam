@@ -26,9 +26,10 @@ FROM (
       FROM
         CURRENT_DATE) - 1)
     AND EXTRACT(YEAR
-      FROM
-        published_at) = EXTRACT(YEAR
-      FROM CURRENT_DATE) issues
+    FROM
+      published_at) = EXTRACT(YEAR
+    FROM
+      CURRENT_DATE)) issues
 LEFT JOIN (
   SELECT
     *
